@@ -1,0 +1,415 @@
+.brillante {
+    text-shadow: 0px 0px 10px #fff; /* Agregamos un efecto de sombra blanca para que el texto brille */
+    color: #fff; /* Establecemos el color del texto a blanco */
+  }
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #979595; /* Establecemos el fondo en un tono de gris claro */
+    background-image: linear-gradient(to bottom right, #3498db, #0c3815); /* Establecemos un gradiente de fondo que va desde gris claro hasta azul claro, con un ángulo hacia la derecha */
+}
+
+header {
+    background-image: linear-gradient(to right, #3498db, #060202); /* Agregamos un degradado de azul a blanco */
+    padding: 1em;
+    display: flex;
+    justify-content: space-between;
+}
+
+.logo {
+    width: 100px;
+    height: 100px;
+    margin-left: 20px;
+}
+
+.logo img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: space-between;
+}
+
+nav li {
+    margin-right: 20px;
+}
+
+nav a {
+    color: #333; /* Cambiamos el color del texto a negro */
+    text-decoration: none;
+    text-shadow: 0px 0px 10px #fff; /* Agregamos un efecto de sombra blanca para que el texto brille */
+}
+
+nav a:hover {
+    color: #ffffff; /* Cambiamos el color del texto en hover a gris oscuro */
+    text-shadow: 0px 0px 10px #fff; /* Agregamos un efecto de sombra blanca para que el texto brille */
+}
+
+nav ul li a {
+    color: #000000; /* Color brillante */
+    text-decoration: none;
+    font-weight: bold; /* Negrita */
+    position: relative; /* Posición relativa para el efecto de brillo */
+  }
+  
+  nav ul li a:hover {
+    text-decoration: underline;
+  }
+  
+  nav ul li a:hover::after {
+    content: '→'; /* Agregamos un texto al contenido */
+    position: absolute; /* Posición absoluta para el efecto de brillo */
+    bottom: 0; /* Abajo */
+    left: 0; /* Izquierda */
+    width: 0; /* Ancho del efecto de brillo */
+    height: 2px; /* Alto del efecto de brillo */
+    transition: width 0.2s ease-in-out; /* Efecto de transición */
+    font-size: 16px; /* Tamaño de fuente para el texto */
+    color: #000000; /* Color del texto */
+    background-color: transparent; /* Eliminamos el fondo gris */
+  }
+  
+  nav ul li a:hover::after {
+    width: 100%; /* Ancho del efecto de brillo al pasar el cursor */
+  }
+  
+  nav ul li a.active {
+    border-bottom: 2px solid #00bff7; /* Color brillante debajo */
+  }
+  
+  nav ul li a.active:hover {
+    border-bottom: 2px solid #00bff7; /* Color brillante debajo */
+    transition: border-bottom 0.2s ease-in-out; /* Efecto de transición */
+  }
+
+  .container {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+  
+  .imagen {
+    width: 50vh;
+    height: auto;
+    margin-bottom: 20px;
+    display: block;
+  }
+  
+  .imagen img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    border-radius: 10px;
+  }
+  
+  .boton {
+    margin-bottom: 20px;
+  }
+  
+  .conoce-mas {
+    background-color: #00698f;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+  }
+  
+  .conoce-mas:hover {
+    background-color: #00567f;
+  }
+  
+  .texto-adicional {
+    display: none;
+    padding: 20px;
+    background-image: linear-gradient(to bottom, #3498db, #000000); /* Establecemos el fondo degradado */
+    border: 1px solid #3498db;
+    border-radius: 10px;
+    width: 100%;
+    color: #fff;
+    text-shadow: 0px 0px 10px #fff; /* Agregamos un efecto de sombra de texto blanco */
+  }
+  
+  /* Reglas de diseño responsivo */
+  @media (max-width: 768px) {
+    .container {
+      height: auto;
+    }
+    .imagen {
+      width: 100%;
+      height: auto;
+    }
+    .imagen img {
+      width: 100%;
+      height: auto;
+    }
+    .boton {
+      margin-bottom: 10px;
+    }
+    .conoce-mas {
+      padding: 5px 10px;
+    }
+    .texto-adicional {
+      width: 100%;
+    }
+  }
+
+ /* Estilos básicos para el slider */
+.slider {
+    position: relative;
+    width: 80%;
+    max-width: 500px; /* Ajusta el tamaño máximo según tu diseño */
+    margin: auto;
+    overflow: hidden;
+}
+
+.slides {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}
+
+.slide {
+    position: relative; /* Necesario para posicionar el texto en relación con la diapositiva */
+    min-width: 100%;
+    box-sizing: border-box;
+}
+
+img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* Estilo para el contenedor de texto dentro de las diapositivas */
+.text-overlay {
+    position: absolute;
+    bottom: 0; /* Coloca el texto en la parte inferior */
+    left: 0;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.5); /* Fondo semitransparente para mejorar legibilidad */
+    color: rgb(255, 255, 255);
+    padding: 20px;
+    box-sizing: border-box;
+    text-align: center;
+}
+
+/* Estilo para el precio */
+.price {
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+/* Estilo para la promoción */
+.promotion {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+/* Estilo para el banner de promoción adicional */
+.promo-banner {
+    position: absolute;
+    top: 10px; /* Ajusta la posición vertical según tu diseño */
+    left: 0;
+    width: 100%;
+    background-color: #ff5722; /* Color de fondo del banner */
+    color: white;
+    padding: 10px 0;
+    text-align: center;
+    font-size: 18px;
+    font-weight: bold;
+    z-index: 10; /* Asegura que el banner esté sobre otros elementos */
+}
+
+/* Estilos para los botones de navegación */
+.prev, .next {
+    position: absolute;
+    top: 50%;
+    width: auto;
+    padding: 16px;
+    margin-top: -22px;
+    color: rgb(255, 255, 255);
+    font-weight: bold;
+    font-size: 24px;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+    background-color: rgba(0, 0, 0, 0.5);
+    cursor: pointer;
+}
+
+.next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+}
+
+.prev:hover, .next:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+.producto {
+    display: inline-block;
+    margin: 10px;
+    padding: 10px;
+    border: 1px solid #3498db;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgb(74, 141, 60);
+  }
+  
+  .producto img {
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 10px 10px 0 0;
+  }
+  
+  .producto h2 {
+    font-size: 18px;
+    margin-bottom: 10px;
+  }
+  
+  .producto p {
+    font-size: 16px;
+    color: #000000;
+    font-weight: bold;
+    margin-bottom: 10px;
+    color: #ffffff; /* Color blanco para que el texto brille */
+    text-shadow: 0px 0px 10px #fff; /* Agregamos un efecto de sombra blanca para que el texto brille */
+  }
+
+  .comprar {
+    background-color: #4CAF50; /* Color verde */
+    color: #fff; /* Color blanco para el texto */
+    padding: 10px 20px; /* Espacio interno */
+    border: none; /* Sin borde */
+    border-radius: 5px; /* Borde redondeado */
+    cursor: pointer; /* Cursor en forma de mano */
+  }
+  
+  .comprar:hover {
+    background-color: #3e8e41; /* Color verde oscuro al pasar el mouse */
+  }
+ 
+  /* Agregamos un poco de estilo para que la sección de contacto se destaque */
+#contacto {
+  background-color: #ffffff;
+  padding: 20px;
+  border: 1px solid #000000;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Agregamos una transición suave para que la página se desplace hacia la sección de contacto */
+html, body {
+  scroll-behavior: smooth;
+  color: #060202;
+}
+
+#contactos {
+  text-align: center; /* Centra el texto */
+  margin: 0 auto; /* Centra el div horizontalmente */
+  width: 50%; /* Establece el ancho del div */
+  padding: 20px; /* Agrega espacio interno */
+  background-image: linear-gradient(to bottom, #979595, #62d8ff, #0c3815); /* Fondo degradado azul, negro y verde */
+  color: #000000; /* Texto blanco */
+  text-shadow: 0 0 5px #fff; /* agregar brillo */
+  font-weight: bold; /* agregar negrita */
+  box-shadow: 0 0 10px rgb(86, 240, 109); /* Sombra */
+}
+#contactos a, #contactos span {
+  color: #000000; /* cambiar color del texto a blanco */
+  font-weight: bold; /* agregar negrita */
+  text-shadow: 0 0 5px #fff; /* agregar brillo */
+}
+
+.social-slider {
+  display: flex;
+  flex-wrap: wrap; /* agregar wrap para que los items se ajusten en una fila */
+  justify-content: center;
+}
+.social-slider .item {
+  display: inline-flex; /* cambiar display a inline-flex para que los items se muestren en una fila */
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  margin: 10px; /* agregar margen entre los items */
+}
+.social-slider .item a {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-decoration: none;
+  color: #ffffff;
+}
+.social-slider .item img {
+  width: 36px;
+  height: 36px;
+  margin-bottom: 10px;
+  transition: transform 0.3s; /* agregar transición para el efecto de hover */
+}
+.social-slider .item span {
+  font-size: 18px;
+}
+.social-slider .item a:hover img { /* agregar efecto de hover */
+  transform: scale(1.1); /* aumentar tamaño del icono en un 10% */
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.3); /* agregar sombra para dar brillo */
+}
+
+
+/* Pantalla pequeña (menos de 768px) */
+@media (max-width: 767px) {
+  /* Estilos para pantalla pequeña */
+}
+
+/* Pantalla mediana (entre 768px y 1024px) */
+@media (min-width: 768px) and (max-width: 1023px) {
+  /* Estilos para pantalla mediana */
+}
+
+/* Pantalla grande (más de 1024px) */
+@media (min-width: 1024px) {
+  /* Estilos para pantalla grande */
+}
+
+/* Ajustar ancho de los elementos */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  max-width: 1200px; /* Ancho máximo del contenedor */
+  margin: 0 auto; /* Centrar el contenedor */
+  padding: 20px; /* Agregar espacio interno */
+}
+
+/* Ajustar tamaño de los elementos en función del tamaño de la pantalla */
+@media (max-width: 767px) {
+  .container {
+    width: 90%; /* Ancho del contenedor en pantalla pequeña */
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1023px) {
+  .container {
+    width: 80%; /* Ancho del contenedor en pantalla mediana */
+  }
+}
+
+@media (min-width: 1024px) {
+  .container {
+    width: 70%; /* Ancho del contenedor en pantalla grande */
+  }
+}

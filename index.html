@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mi Tienda</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+              <li><a href="#inicio" class="brillante">Inicio</a></li>
+              <li><a href="#productos" class="brillante">Productos</a></li>
+              <li><a href="#contactos" class="brillante">contactos</a></li>
+            </ul>
+          </nav>
+        <div class="logo">
+            <img src="logo/Logo gerlop.gif" alt="Logo de mi empresa">
+        </div>
+    </header>
+    <main>
+        <!-- Contenido principal -->
+    </main>
+    <script src="script.js"></script>
+</body>
+</html>
+<div class="container">
+    <div class="imagen">
+      <img src="logo/diseno-tiendas-virtuales-2.png" alt="Imagen">
+    </div>
+    <div class="boton">
+      <a href="#" class="conoce-mas">Conoce más</a>
+    </div>
+    <div class="texto-adicional">
+      <p>Nuestra empresa se especializa en la venta de productos tecnológicos de alta calidad, desde smartphones y laptops hasta accesorios y gadgets innovadores. Nuestro objetivo es brindar a nuestros clientes la mejor experiencia de compra en línea, con un servicio al cliente excepcional y una amplia variedad de productos para elegir.</p>
+    </div>
+  </div>
+  
+  <script>
+    // Seleccionamos el botón y el texto adicional
+    const boton = document.querySelector('.conoce-mas');
+    const textoAdicional = document.querySelector('.texto-adicional');
+  
+    // Agregamos un evento de click al botón
+    boton.addEventListener('click', () => {
+      // Si el texto adicional está oculto, lo mostramos
+      if (textoAdicional.style.display === 'none') {
+        textoAdicional.style.display = 'block';
+      } else {
+        // Si el texto adicional está visible, lo ocultamos
+        textoAdicional.style.display = 'none';
+      }
+    });
+  </script>
+ <!-- Sección de Inicio -->
+<div id="inicio">
+    <div class="texto-adicional">
+      Este es el texto adicional
+    </div>
+  </div>
+ <!DOCTYPE html>
+    <html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Slider con Promoción Adicional</title>
+        <link rel="stylesheet" href="styles.css">
+    </head>
+    <body>
+        <div class="slider">
+            <div class="slides">
+                <div class="slide">
+                    <img src="slider/auriculares-1-removebg-preview.png" alt="Imagen 1">
+                    <div class="text-overlay">
+                        <div class="price">$15.000</div>
+                        <div class="promotion">¡Oferta Especial!</div>
+                    </div>
+                </div>
+                <div class="slide">
+                    <img src="slider/diadema-removebg-preview.png" alt="Imagen 2">
+                    <div class="text-overlay">
+                        <div class="price">$50.000</div>
+                        <div class="promotion">Super descuento</div>
+                    </div>
+                </div>
+                <div class="slide">
+                    <img src="slider/forro_volante-removebg-preview.png" alt="Imagen 3">
+                    <div class="text-overlay">
+                        <div class="price">$30.000</div>
+                        <div class="promotion">¿Como lo quieres?</div>
+                    </div>
+                </div>
+                <div class="slide">
+                    <img src="slider/fundas-removebg-preview.png" alt="Imagen 4">
+                    <div class="text-overlay">
+                        <div class="price">$25.000</div>
+                        <div class="promotion">Para todo tipo de celular</div>
+                    </div>
+                </div>
+                <div class="slide">
+                    <img src="slider/parlantes_minis-removebg-preview.png" alt="Imagen 5">
+                    <div class="text-overlay">
+                        <div class="price">$80.000</div>
+                        <div class="promotion">Que gran sonido tienen</div>
+                    </div>
+                </div>
+                <div class="slide">
+                    <img src="slider/parlantes-removebg-preview.png" alt="Imagen 6">
+                    <div class="text-overlay">
+                        <div class="price">$200.000</div>
+                        <div class="promotion">Descuento por Tiempo Limitado</div>
+                    </div>
+                </div>
+                <div class="slide">
+                    <img src="slider/pedales_para_carro-removebg-preview.png" alt="Imagen 7">
+                    <div class="text-overlay">
+                        <div class="price">$120.000</div>
+                        <div class="promotion">Buena calidad</div>
+                    </div>
+                </div>
+                <div class="slide">
+                    <img src="slider/plumillas-removebg-preview.png" alt="Imagen 8">
+                    <div class="text-overlay">
+                        <div class="price">$25.000</div>
+                        <div class="promotion">Escoge la tuya</div>
+                    </div>
+                </div>
+                <div class="slide">
+                    <img src="slider/silicona_para_carro-removebg-preview.png" alt="Imagen 9">
+                    <div class="text-overlay">
+                        <div class="price">$15.000</div>
+                        <div class="promotion">super resistente</div>
+                    </div>
+                </div>
+                <div class="slide">
+                    <img src="slider/tipo_c-removebg-preview.png" alt="Imagen 10">
+                    <div class="text-overlay">
+                        <div class="price">$20.000</div>
+                        <div class="promotion">buena eleccion</div>
+                    </div>
+                </div>
+                <div class="slide">
+                    <img src="slider/tipo_v8-removebg-preview.png" alt="Imagen 11">
+                    <div class="text-overlay">
+                        <div class="price">$15.000</div>
+                        <div class="promotion">los tradicionales</div>
+                    </div>
+                </div>
+            </div>
+            <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+            <a class="next" onclick="plusSlides(1)">&#10095;</a>
+            <div class="promo-banner">¡Grandes ofertas y productos de calidad, gracias por tu visita.</div>
+        </div>
+        <script src="scripts.js"></script>
+        <div id="productos">
+          <div class="producto">
+            <img src="imagen productos/auriculares-1-removebg-preview.png" alt="Imagen del producto 1">
+            <h2>auriculares</h2>
+            <p>Precio: $<span class="precio">15.000</span></p>
+            <a href="https://wa.me/+573246621275?text=Hola%20me%20interesa%20el%20producto%20auriculares%20que%20vi%20en%20su%20sitio%20web" class="comprar" target="_blank">Comprar</a>
+          </div>
+          <div class="producto">
+            <img src="imagen productos/diadema-removebg-preview.png" alt="Imagen del producto 2">
+            <h2>diadema bluethoo</h2>
+            <p>Precio: $<span class="precio">50.000</span></p>
+            <a href="https://wa.me/+573246621275?text=Hola%20me%20interesa%20el%20producto%20diadema%20bluethoo%20que%20vi%20en%20su%20sitio%20web" class="comprar" target="_blank">Comprar</a>
+          </div>
+          <div class="producto">
+            <img src="imagen productos/forro_volante-removebg-preview.png" alt="Imagen del producto 3">
+            <h2>forro volante</h2>
+            <p>Precio: $<span class="precio">30.000</span></p>
+            <a href="https://wa.me/+573246621275?text=Hola%20me%20interesa%20el%20producto%20forro%20volante%20que%20vi%20en%20su%20sitio%20web" class="comprar" target="_blank">Comprar</a>
+          </div>
+          <div class="producto">
+            <img src="imagen productos/fundas-removebg-preview.png" alt="Imagen del producto 4">
+            <h2>fundas para celular</h2>
+            <p>Precio: $<span class="precio">25.000</span></p>
+            <a href="https://wa.me/+573246621275?text=Hola%20me%20interesa%20el%20producto%20fundas%20para%20celular%20que%20vi%20en%20su%20sitio%20web" class="comprar" target="_blank">Comprar</a>
+          </div>
+          <div class="producto">
+            <img src="imagen productos/parlantes_minis-removebg-preview.png" alt="Imagen del producto 5">
+            <h2>parlantes minis</h2>
+            <p>Precio: $<span class="precio">80.000</span></p>
+            <a href="https://wa.me/+573246621275?text=Hola%20me%20interesa%20el%20producto%20parlantes%20minis%20que%20vi%20en%20su%20sitio%20web" class="comprar" target="_blank">Comprar</a>
+          </div>
+          <div class="producto">
+            <img src="imagen productos/parlantes-removebg-preview.png" alt="Imagen del producto 6">
+            <h2>parlantes grande y mediano</h2>
+            <p>Precio: $<span class="precio">200.000</span></p>
+            <a href="https://wa.me/+573246621275?text=Hola%20me%20interesa%20el%20producto%20parlantes%20grande%20y%20mediano%20que%20vi%20en%20su%20sitio%20web" class="comprar" target="_blank">Comprar</a>
+          </div>
+          <div class="producto">
+            <img src="imagen productos/pedales_para_carro-removebg-preview.png" alt="Imagen del producto 7">
+            <h2>pedales para carro</h2>
+            <p>Precio: $<span class="precio">120.000</span></p>
+            <a href="https://wa.me/+573246621275?text=Hola%20me%20interesa%20el%20producto%20" class="comprar" target="_blank">Comprar</a>
+          </div>   
+
+          <div class="producto">
+            <img src="imagen productos/plumillas-removebg-preview.png" alt="Imagen del producto 6">
+            <h2>plumillas para vehiculo</h2>
+            <p>Precio: $<span class="precio">80.000</span></p>
+            <a href="https://wa.me/+573246621275?text=Hola%20me%20interesa%20el%20producto%20parlantes%20grande%20y%20mediano%20que%20vi%20en%20su%20sitio%20web" class="comprar" target="_blank">Comprar</a>
+          </div>
+          <div class="producto">
+            <img src="imagen productos/silicona_para_carro-removebg-preview.png" alt="Imagen del producto 6">
+            <h2>silicona para vehiculo</h2>
+            <p>Precio: $<span class="precio">15.000</span></p>
+            <a href="https://wa.me/+573246621275?text=Hola%20me%20interesa%20el%20producto%20parlantes%20grande%20y%20mediano%20que%20vi%20en%20su%20sitio%20web" class="comprar" target="_blank">Comprar</a>
+          </div>
+          <div class="producto">
+            <img src="imagen productos/tipo_c-removebg-preview.png" alt="Imagen del producto 6">
+            <h2>cargadores tipo c</h2>
+            <p>Precio: $<span class="precio">20.000</span></p>
+            <a href="https://wa.me/+573246621275?text=Hola%20me%20interesa%20el%20producto%20parlantes%20grande%20y%20mediano%20que%20vi%20en%20su%20sitio%20web" class="comprar" target="_blank">Comprar</a>
+          </div>
+          <div class="producto">
+            <img src="imagen productos/tipo_v8-removebg-preview.png" alt="Imagen del producto 6">
+            <h2>cargadores tipo v8</h2>
+            <p>Precio: $<span class="precio">15.000</span></p>
+            <a href="https://wa.me/+573246621275?text=Hola%20me%20interesa%20el%20producto%20parlantes%20grande%20y%20mediano%20que%20vi%20en%20su%20sitio%20web" class="comprar" target="_blank">Comprar</a>
+          </div>
+
+          <div id="contactos">
+            <p>Nombre: [GERLOP SISTEMS]</p>
+            <p>Teléfono: <a href="https://wa.me/[Tu número de WhatsApp]">[+573246621275]</a></p>
+            <p>Correo: <a href="mailto:[Tu correo electrónico]">[hermanduarteh0506@gmail.com]</a></p>
+          </div>
+
+        </div>
+
+        <div class="owl-carousel social-slider">
+          <div class="item">
+            <a href="https://www.facebook.com/61561545926737" target="_blank">
+              <img src="slider redes/facebook1.png" alt="Facebook Logo">
+              <span>Facebook</span>
+            </a>
+          </div>
+          <div class="item">
+            <a href="https://www.instagram.com/germanlopez0506" target="_blank">
+              <img src="slider redes/instagram3.png" alt="Instagram Logo">
+              <span>Instagram</span>
+            </a>
+          </div>
+          <div class="item">
+            <a href="https://www.youtube.com/@germangamer23" target="_blank">
+              <img src="slider redes/youtube2.png" alt="YouTube Logo">
+              <span>YouTube</span>
+            </a>
+          </div>
+          <!-- más items aquí -->
+        </div>
+
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">      
+        
+        
